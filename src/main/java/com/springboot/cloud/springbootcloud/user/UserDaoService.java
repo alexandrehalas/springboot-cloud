@@ -2,6 +2,7 @@ package com.springboot.cloud.springbootcloud.user;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -38,6 +39,18 @@ public class UserDaoService {
 		}
 		users.add(user);
 		return user;
+	}
+	
+	public User deleteById(int id) {
+		Iterator<User> usersIterator = users.iterator();
+		while (usersIterator.hasNext()) {
+			User user = usersIterator.next();
+			if (user.getId() == id) {
+				usersIterator.remove();
+				return user;
+			}
+		}
+		return null;
 	}
 	
 }
