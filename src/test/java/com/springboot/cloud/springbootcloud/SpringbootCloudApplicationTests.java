@@ -1,13 +1,13 @@
 package com.springboot.cloud.springbootcloud;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringbootCloudApplicationTests {
+public class SpringbootCloudApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
